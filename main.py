@@ -35,5 +35,5 @@ async def get_student_info():
         "unit_code": "SIT722",
         "unit_name": "Software Deployment and Operation",
         "campus": "<YOUR_CAMPUS>",
-        "year": 2025,
+        "year": 2026,
     }

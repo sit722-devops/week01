@@ -20,7 +20,7 @@ Follow these steps to get the basic FastAPI application running on your local ma
    If you haven't already, clone the unit's example code repository to your local machine:
 
 ```bash
-git clone <URL_TO_YOUR_UNIT_GITHUB_REPOSITORY>
+git clone https://github.com/sit722-devops/week01.git
 ```
 
 2. Then navigate into the `week01` directory:
@@ -56,17 +56,28 @@ With your virtual environment activated, install the required Python packages:
 pip install -r requirements.txt
 ```
 
-5. Update Your Information in `main.py`
+5. Update Your Information in `students.py`
 
-Open the `main.py` file in your VS Code editor. Locate the get_student_info endpoint and update the placeholder information (<YOUR_NAME>, <YOUR_STUDENT_ID>, <YOUR_CAMPUS>) with your actual details. Save the file after making these changes.
+Open the `students.py` file in your VS Code editor. Update the placeholder information (<STUDENT_ID>, <STUDENT_NAME>, <STUDENT_EMAIL> and <STUDENT_PROGRAM>) with your actual details. Save the file after making these changes.
 
-6. Run the FastAPI Application:
+6. Run unit tests
 
-Once dependencies are installed, you can start the FastAPI application using Uvicorn:
+Before running the application, execute the unit tests to verify that your changes have not introduced any issues.
+
+```bash
+pytest tests
+```
+
+Ensure that all tests pass successfully before proceeding to the next step.
+
+7. Run the FastAPI Application:
+
+Start the FastAPI application using Uvicorn:
 
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
+#### Command explanation
 
 - `main:app`: Specifies that Uvicorn should look for an app object (your FastAPI instance) within the app.py file.
 
@@ -76,12 +87,30 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 - `--port 8000`: Specifies the port the application will listen on.
 
-7. Access the Application in Your Browser:
+8. Access the Application in Your Browser:
 
 Open your web browser and navigate to the following URLs:
 
 - Root Endpoint: `http://localhost:8000/`
+- Swagger API Documentation: `http://localhost:8000/docs`
 
-- Student Info Endpoint: `http://localhost:8000/student_info`
+Verify that:
 
-Congratulations! Your basic FastAPI development environment is set up and working.
+- The application starts successfully.
+- Your updated student information is displayed correctly.
+- The API documentation loads without any errors.
+
+
+## Expected Outcome
+By completing this exercise, you should be able to:
+
+- Set up a Python development environment.
+- Create and activate a Python virtual environment.
+- Install project dependencies.
+- Update application data.
+- Execute unit tests.
+- Run a FastAPI application locally.
+- Access and test REST APIs using the FastAPI Swagger interface.
+
+
+**Congratulations! Your basic FastAPI development environment is set up and working.**

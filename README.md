@@ -75,7 +75,7 @@ Ensure that all tests pass successfully before proceeding to the next step.
 Start the FastAPI application using Uvicorn:
 
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 #### Command explanation
 
